@@ -10,7 +10,7 @@ const PageHeader = ({
   isContentBlocked,
 }) => {
   const typeArray = ["no sort", "ascending", "descending"];
-  const icon = ["", "p", "q"];
+  const icon = ["", <p>&#9650;</p>, <p>&#9660;</p>];
   const [typeIndex, setTypeIndex] = useState(0);
 
   const orderList = () => {

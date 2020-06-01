@@ -38,7 +38,7 @@ const CommandButtons = ({
         value="home"
         onClick={onHomeClick}
       >
-        <span>&#9854;</span>
+        <span>&#8634;</span>
         <span className="tooltip home">Refresh</span>
       </button>
       <button className="command-button filter" onClick={onFilterClick}>

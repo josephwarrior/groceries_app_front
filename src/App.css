@@ -305,7 +305,7 @@ rect.high {
 
 .page-headers-area * {
   text-align: center;
-
+  z-index: 1;
   line-height: 10px;
   font-size: 16px;
 }
@@ -356,13 +356,17 @@ rect.high {
 }
 
 .page-header-order-icon {
-  font-family: "Wingdings 3";
+  /*font-family: "Wingdings 3";*/
   padding-top: 5px;
   color: rgb(87, 86, 86);
   font-size: 15px;
-
+  z-index: 3;
   font-weight: 700;
   height: 12px;
+}
+.page-header-order-icon p {
+  margin: 0px;
+  padding: 0px;
 }
 
 .page-body {
@@ -895,10 +899,13 @@ input[type="text"]:disabled {
   .app {
     width: 100%;
     height: 700px;
-    margin: 0px;
+    margin: 0px 0px 0px 60px;
   }
   h1 {
     padding-top: 20px;
+  }
+  .add-button-container {
+    top: 690px;
   }
 }
 
@@ -906,12 +913,15 @@ input[type="text"]:disabled {
   .app {
     width: 100%;
     height: 700px;
-    margin-top: 20px;
+    margin: 20px 0px 0px 60px;
     border: 1px solid #385723;
     border-radius: 30px;
     box-shadow: 10px 10px 16px 5px gray;
   }
   h1 {
     padding-top: 0px;
+  }
+  .add-button-container {
+    top: 665px;
   }
 }
