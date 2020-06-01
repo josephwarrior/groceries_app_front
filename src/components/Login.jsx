@@ -41,7 +41,7 @@ const Login = ({ setUserState, setMessage }) => {
   };
 
   return (
-    <div>
+    <div className="login">
       <div className="login-body">
         <div className="login-title">LOGIN</div>
         <form id="login-form" onSubmit={submitLogin}>

@@ -1,8 +1,11 @@
 body {
-  padding-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
 }
 body * {
   font-family: Calibri;
@@ -12,17 +15,8 @@ button {
   cursor: pointer;
 }
 
-.app {
-  height: 700px;
-  width: 630px;
-  background-color: #e7e6e6;
-  border: 1px solid #385723;
-  border-radius: 30px;
-  box-shadow: 10px 10px 16px 5px gray;
-}
-
 h1 {
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 10px;
   text-align: center;
   border-bottom: 1px solid gray;
@@ -35,20 +29,26 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  width: 500px;
 }
 .current-user-display * {
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .current-user-display span:nth-child(1) {
   font-style: italic;
+
+  text-align: end;
+  padding-top: 3px;
 }
 
 .current-user-display span:nth-child(2) {
   padding: 0px 10px 0px 5px;
   line-height: 18px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
+
+  text-align: end;
 }
 
 .progress-bar {
@@ -104,13 +104,18 @@ rect.high {
   font-weight: 600;
 }
 
+.login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .login-body {
   display: flex;
   flex-direction: column;
   border: 2px solid #385723;
   border-radius: 50px;
-  margin: 60px;
-
+  width: 450px;
   height: 400px;
 }
 
@@ -120,21 +125,21 @@ rect.high {
   top: 100px;
 }
 
-#login-form {
-  display: flex;
-  flex-direction: row;
-  align-self: center;
-  margin-top: 40px;
-}
-
 .login-title {
   align-self: center;
   background-color: #d9d9d9;
   text-align: center;
   font-size: 30px;
   border: 1px solid #385723;
-  width: 425px;
+  width: 375px;
   height: 40px;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin-top: 40px;
 }
 
 .username-label {
@@ -145,7 +150,7 @@ rect.high {
 #username-input {
   margin-left: 10px;
   padding-left: 10px;
-  width: 312px;
+  width: 290px;
   height: 30px;
   font-size: 16px;
   background-color: beige;
@@ -193,14 +198,15 @@ rect.high {
   flex-direction: row;
   justify-content: left;
   padding: 2px 40px 10px 40px;
+  width: 400px;
 }
 
 .command-button.home {
-  padding: 0px;
+  padding: 0px 8px 0px 8px;
   background-color: rgb(207, 203, 203);
   color: green;
-  width: 40px;
-  height: 40px;
+
+  height: 30px;
   border: 1px solid rgb(87, 86, 86);
   border-radius: 8px;
   position: relative;
@@ -209,20 +215,20 @@ rect.high {
 .command-button.home span:nth-child(1) {
   writing-mode: vertical-rl;
   text-orientation: sideways;
-  font-family: Webdings;
-  font-size: 25px;
+  /*font-family: Webdings;*/
+  font-size: 15px;
   font-weight: 700;
   text-align: center;
 }
 
 .command-button.filter {
-  margin-left: 20px;
-  width: 40px;
-  font-family: "Wingdings 2";
+  margin-left: 10px;
+  width: 30px;
+  /*font-family: "Wingdings 2";*/
   font-size: 15px;
   background-color: rgb(207, 203, 203);
   color: green;
-  padding: 0px;
+  padding: 0px 10px 0px 10px;
   border: 1px solid rgb(87, 86, 86);
   border-radius: 8px;
   position: relative;
@@ -274,7 +280,7 @@ rect.high {
 .command-button.logout {
   background-color: rgb(207, 203, 203);
   color: green;
-  margin-left: 360px;
+  margin-left: 300px;
   border: 1px solid rgb(87, 86, 86);
   border-radius: 8px;
 }
@@ -290,8 +296,10 @@ rect.high {
 .page-headers-area {
   display: flex;
   flex-direction: row;
-  margin: 0px 40px 5px 30px;
+  margin: 0px 0px 5px 5px;
+  padding: 0px 40px 0px 7px;
   height: 35px;
+  width: 430px;
   background-color: #d9d9d9;
 }
 
@@ -303,18 +311,18 @@ rect.high {
 }
 
 .page-header.category {
-  margin-left: 13px;
+  margin-left: 0px;
   width: 80px;
 }
 
 .page-header.item-name {
   margin-left: 5px;
-  width: 266px;
+  width: 175px;
 }
 
 .page-header.remaining-stock {
   margin-left: 5px;
-  width: 175px;
+  width: 140px;
 }
 
 .shopping-list-title {
@@ -360,18 +368,18 @@ rect.high {
 .page-body {
   padding-bottom: 5px;
   border-bottom: 1px solid #385723;
-
-  overflow: auto;
-  height: 340px;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 400px;
 }
 
 ul {
   background-color: #d9d9d9;
   border-radius: 0px 0px 10px 10px;
-  margin: 0px 17px 0px 30px;
-  padding: 0px 10px 5px 10px;
+  margin: 0px 5px 0px 5px;
+
+  padding: 5px 5px 5px 5px;
   list-style: none;
-  overflow: normal;
 }
 
 .item {
@@ -379,7 +387,7 @@ ul {
   flex-direction: row;
   border: 1px solid #385723;
   border-radius: 10px;
-  width: 534px;
+  justify-content: flex-start;
   height: 50px;
   margin-bottom: 10px;
 }
@@ -412,14 +420,13 @@ ul {
 
 .item * {
   font-family: Calibri, Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  text-overflow: clip;
+  font-size: 0.7rem;
   word-wrap: break-word;
   line-height: 50px;
 }
 
 .item .category {
-  width: 85px;
+  width: 78px;
   padding: 0px;
 
   line-height: 20px;
@@ -427,9 +434,9 @@ ul {
   text-overflow: clip;
 }
 .item .category input {
-  width: 85px;
+  width: 78px;
   padding-left: 1px;
-  font-size: 15px;
+  font-size: 0.7em;
   font-family: "Agency FB", Arial, Helvetica, sans-serif;
   font-style: italic;
   text-overflow: clip;
@@ -437,13 +444,13 @@ ul {
 }
 
 .item .name {
-  width: 240px;
+  width: 180px;
 }
 .item .name input {
   text-align: start;
-  width: 240px;
+  width: 175px;
   margin-left: 5px;
-  font-size: 22px;
+  font-size: 1rem;
 }
 .stock-remaining {
   margin-left: 5px;
@@ -455,7 +462,7 @@ ul {
   width: 65px;
   margin-left: 5px;
   padding-right: 5px;
-  font-size: 16px;
+  font-size: 0.7rem;
   text-align: right;
   display: flex;
   flex-direction: column;
@@ -490,10 +497,10 @@ input[type="text"] {
 }
 
 select.select-units {
-  padding: 0px 10px 0px 2px;
+  padding: 0px 2px 0px 2px;
   height: 18px;
   line-height: 18px;
-  font-size: 14px;
+  font-size: 0.7rem;
   z-index: 1;
   background-color: transparent;
   border-color: transparent;
@@ -599,15 +606,15 @@ input[type="text"]:disabled {
   flex: 1;
   max-width: 80px;
   height: 20px;
-  font-size: 18px;
+  font-size: 0.7rem;
   font-weight: 100;
   align-self: center;
   text-align: right;
 }
 .stock-units {
-  max-width: 20px;
+  max-width: 10px;
   line-height: 50px;
-  font-size: 18px;
+  font-size: 0.7rem;
   font-weight: 300;
   padding-left: 3px;
   margin: 0px;
@@ -629,6 +636,7 @@ input[type="text"]:disabled {
   width: 30px;
   display: flex;
   justify-content: center;
+  margin-right: 0px;
 }
 .item-delete {
   border-radius: 50%;
@@ -636,7 +644,7 @@ input[type="text"]:disabled {
   width: 15px;
   line-height: 15px;
   align-self: center;
-  font-size: 10px;
+  font-size: 0.5rem;
   font-weight: 700;
   text-align: center;
   padding: 0px;
@@ -651,7 +659,7 @@ input[type="text"]:disabled {
   height: 20px;
   width: 20px;
   line-height: 20px;
-  font-size: 15px;
+  font-size: 0.7em;
   cursor: pointer;
 }
 
@@ -717,7 +725,7 @@ input[type="text"]:disabled {
   border-radius: 10px;
   position: relative;
   z-index: 1;
-  left: 100px;
+  left: 60px;
   top: -510px;
   opacity: 1;
   display: flex;
@@ -796,9 +804,9 @@ input[type="text"]:disabled {
 
 .add-button-container {
   height: 55px;
-  width: 630px;
+  width: 580px;
   position: absolute;
-  top: 655px;
+  top: 665px;
 }
 .add-button {
   background-color: aqua;
@@ -814,7 +822,7 @@ input[type="text"]:disabled {
   color: blue;
   position: relative;
   top: 3px;
-  left: 550px;
+  left: 450px;
   line-height: 40px;
   text-align: center;
 }
@@ -831,15 +839,15 @@ input[type="text"]:disabled {
     width: 40px;
     height: 40px;
     top: 3px;
-    left: 550px;
-    font-size: 32px;
+    left: 450px;
+    font-size: 10px;
   }
   to {
     width: 50px;
     height: 50px;
     top: -2px;
-    left: 545px;
-    font-size: 37px;
+    left: 445px;
+    font-size: 15px;
   }
 }
 
@@ -852,7 +860,7 @@ input[type="text"]:disabled {
 
 .add-button.save,
 .add-button.update {
-  font-family: Wingdings;
+  /*font-family: Wingdings;*/
   font-size: 30px;
 }
 
@@ -861,4 +869,49 @@ input[type="text"]:disabled {
   height: 50px;
   top: -65px;
   left: 545px;
+}
+
+#root {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#root:first-child {
+  width: inherit;
+  height: inherit;
+  padding: 0px;
+}
+
+.app {
+  background-color: #e7e6e6;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #e7e6e6;
+  }
+  .app {
+    width: 100%;
+    height: 700px;
+    margin: 0px;
+  }
+  h1 {
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .app {
+    width: 100%;
+    height: 700px;
+    margin-top: 20px;
+    border: 1px solid #385723;
+    border-radius: 30px;
+    box-shadow: 10px 10px 16px 5px gray;
+  }
+  h1 {
+    padding-top: 0px;
+  }
 }

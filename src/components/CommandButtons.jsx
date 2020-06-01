@@ -38,11 +38,11 @@ const CommandButtons = ({
         value="home"
         onClick={onHomeClick}
       >
-        <span>q</span>
+        <span>&#9854;</span>
         <span className="tooltip home">Refresh</span>
       </button>
       <button className="command-button filter" onClick={onFilterClick}>
-        +<span className="tooltip filter">Filter</span>
+        &#9826;<span className="tooltip filter">Filter</span>
       </button>
       <button className="command-button logout" onClick={onLogoutClick}>
         LOGOUT

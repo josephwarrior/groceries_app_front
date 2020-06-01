@@ -286,7 +286,7 @@ const Content = ({ username, setMessage, logout }) => {
         )}
         <div className="add-button-container">
           <button className={"add-button " + currentPage} onClick={onAddClick}>
-            {currentPage !== "home" ? "<" : "+"}
+            {currentPage !== "home" ? "SAVE" : "+"}
           </button>
         </div>
       </div>
