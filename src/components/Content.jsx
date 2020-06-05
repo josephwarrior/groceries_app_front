@@ -254,7 +254,7 @@ const Content = ({ username, setMessage, logout }) => {
   };
 
   return (
-    <div>
+    <div className="content-parent">
       <div className={"content" + (isFilterInvoked ? " blurred" : "")}>
         <RemainingStock transitoryArray={transitoryArray} />
         <CommandButtons
@@ -285,9 +285,14 @@ const Content = ({ username, setMessage, logout }) => {
           />
         )}
         <div className="add-button-container">
-          <button className={"add-button " + currentPage} onClick={onAddClick}>
-            {currentPage !== "home" ? "SAVE" : "+"}
-          </button>
+          <div className="add-button-area">
+            <button
+              className={"add-button " + currentPage}
+              onClick={onAddClick}
+            >
+              {currentPage !== "home" ? "SAVE" : "+"}
+            </button>
+          </div>
         </div>
       </div>
       {isFilterInvoked && (

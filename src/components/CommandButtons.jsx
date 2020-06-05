@@ -33,17 +33,19 @@ const CommandButtons = ({
 
   return (
     <div className="command-buttons">
-      <button
-        className="command-button home"
-        value="home"
-        onClick={onHomeClick}
-      >
-        <span>&#8634;</span>
-        <span className="tooltip home">Refresh</span>
-      </button>
-      <button className="command-button filter" onClick={onFilterClick}>
-        &#9826;<span className="tooltip filter">Filter</span>
-      </button>
+      <div className="refresh-filter-buttons">
+        <button
+          className="command-button home"
+          value="home"
+          onClick={onHomeClick}
+        >
+          <span>&#8634;</span>
+          <span className="tooltip home">Refresh</span>
+        </button>
+        <button className="command-button filter" onClick={onFilterClick}>
+          &#9826;<span className="tooltip filter">Filter</span>
+        </button>
+      </div>
       <button className="command-button logout" onClick={onLogoutClick}>
         LOGOUT
       </button>

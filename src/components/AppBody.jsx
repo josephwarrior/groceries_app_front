@@ -4,7 +4,7 @@ import Content from "./Content";
 
 const AppBody = ({ userState, setUserState, setMessage, logout }) => {
   return (
-    <div className="appbody">
+    <div className="app-body">
       {userState.isLoggedIn ? (
         <Content
           setMessage={setMessage}

@@ -27,17 +27,18 @@ const PageBody = ({
       <ul className={"list " + currentPage}>
         {itemsArray.map((item) => {
           return (
-            <Item
-              item={item}
-              key={item.id}
-              currentPage={currentPage}
-              setCurrentPage={setCurrentPage}
-              updateArrayItem={updateArrayItem}
-              deleteItem={deleteItem}
-              isContentBlocked={isContentBlocked}
-              setIsContentBlocked={setIsContentBlocked}
-              setMessage={setMessage}
-            />
+            <div className="item-container" key={item.id}>
+              <Item
+                item={item}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+                updateArrayItem={updateArrayItem}
+                deleteItem={deleteItem}
+                isContentBlocked={isContentBlocked}
+                setIsContentBlocked={setIsContentBlocked}
+                setMessage={setMessage}
+              />
+            </div>
           );
         })}
       </ul>

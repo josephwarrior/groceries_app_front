@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 const RemainingStock = ({ transitoryArray }) => {
+  const [currentStock, setCurrentStock] = useState(0);
+
   useEffect(() => {
     let sum = 0;
     let count = 0;
@@ -11,6 +13,7 @@ const RemainingStock = ({ transitoryArray }) => {
     });
     const newBarLengthRatio = sum / count;
     setBarLength(newBarLengthRatio);
+    setCurrentStock((newBarLengthRatio * 100).toFixed(0));
   }, [transitoryArray]);
 
   const setBarLength = (barLengthRatio) => {
@@ -40,10 +43,10 @@ const RemainingStock = ({ transitoryArray }) => {
 
   return (
     <div className="progress-bar">
-      <svg id="bar-frame" width="400">
+      <svg id="bar-frame" width="200">
         <rect id="bar" width="0" height="60" className="high" />
       </svg>
-      <div className="progress-bar label">REMAINING STOCK BAR</div>
+      <div id="progress-bar-label">{currentStock} %</div>
     </div>
   );
 };
